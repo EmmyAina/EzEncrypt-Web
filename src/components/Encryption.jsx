@@ -2,11 +2,16 @@ import { Input } from "@heroui/input";
 import { Button, Select, SelectItem } from "@heroui/react";
 import { algos } from "../helpers/data";
 import { useState } from "react";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 function Encryption() {
 	const [selectedAlgo, setSelectedAlgo] = useState(new Set([]));
 	const [selectedFile, setSelectedFile] = useState(null);
 	const [password, setPassword] = useState("");
+
+	const [isVisible, setisVisible] = useState(false);
+
+	const [loading, setLoading] = useState(false);
 
 	return (
 		<div className="flex space-y-6 flex-col">
@@ -45,18 +50,21 @@ function Encryption() {
 
 			<div>
 				<Input
-					// type="password"
+					type={isVisible ? "text" : "password"}
 					label="Enter a password"
 					labelPlacement="outside"
-					isClearable={true}
-					// placeholder="Enter a password"
+					// isClearable={true}
+					placeholder="Enter a password"
 					variant="bordered"
 					value={password}
 					onValueChange={setPassword}
 					endContent={
-						
+						<FaRegEyeSlash
+							onClick={() => {
+								setisVisible(!isVisible);
+							}}
+						/>
 					}
-					
 				/>
 			</div>
 
@@ -65,6 +73,11 @@ function Encryption() {
 					className="w-full bg-black"
 					color="primary"
 					isDisabled={!selectedFile || !password}
+					isLoading={loading}
+					onPress={() => {
+						setLoading(true);
+						console.log({ password: password, algorithm: selectedAlgo[0], textFile:selectedFile });
+					}}
 				>
 					Encrypt File
 				</Button>
