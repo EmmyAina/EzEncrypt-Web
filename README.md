@@ -1,43 +1,45 @@
-## React + Vite + TailwindCSS template
+# EzEncrypt 🔐
 
-Create your own project based on this template by running:
+EzEncrypt is a minimal web-based tool that allows users to encrypt and decrypt text files using OpenSSL. Upload a file, set a password, and either encrypt or decrypt it—secure and easy.
 
-```bash
-npx degit quavedev/react-vite-tailwindcss-template your-project
-```
+## 🚀 Features
 
-## Install
+- Upload plaintext files and encrypt them using a password
+- Upload encrypted files and decrypt them with the correct password
+- Download the resulting file directly from the browser
+- Clean and minimal UI built with React and Vite
+- Server-side processing with OpenSSL
 
-```bash
-npm install
-```
+## 🧰 Tech Stack
 
-> You can make sure you are running Node.js 18 with `nvm`. Run `nvm use` to set the Node.js 18 in this project.
+- **Frontend:** React + Vite
+- **Styling:** Tailwind CSS (or your preferred CSS framework)
+- **Backend:** Python, Django
+- **Encryption:** OpenSSL CLI
 
-## Develop
+## 📦 Getting Started
 
-```bash
-npm run dev
-```
+### Prerequisites
 
-## Build
+- Node.js and npm
+- OpenSSL installed on your system
 
-```bash
-npm build
-```
+### Installation
 
-Preview:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/EzEncrypt.git
+   cd EzEncrypt
+2. ** Install Frontend Dependencies
+   ```bash
+   npm install
+3. ** Start the development server
+   npm run dev
 
-```bash
-npm run preview
-```
+## 🛡 Security Notes
+- Files and passwords are not stored
+- For personal or low-risk usage only
 
-## Deploy on zCloud
-
-Create your account at [zcloud.ws](https://zcloud.ws).
-
-Connect to your GitHub, create your app and done!
-
-Push to Deploy.
-
-Or use the preconfigured [action](./.github/workflows/deploy.yaml) to deploy your app. Uncomment all the lines and add your zCloud User Token (ZCLOUD_USER_TOKEN) to your secrets on GitHub and replace `env` placeholder value with your app env name (check it on app.zcloud.ws > Your app env > Settings).
+## 🙌 Acknowledgements
+- Inspired by OpenSSL's powerful CLI capabilities
+- UI styled minimally for simplicity
