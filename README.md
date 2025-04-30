@@ -1,45 +1,43 @@
-# EzEncrypt 🔐
+## React + Vite + TailwindCSS template
 
-EzEncrypt is a minimal web-based tool that allows users to encrypt and decrypt text files using OpenSSL. Upload a file, set a password, and either encrypt or decrypt it—secure and easy.
+Create your own project based on this template by running:
 
-## 🚀 Features
+```bash
+npx degit quavedev/react-vite-tailwindcss-template your-project
+```
 
-- Upload plaintext files and encrypt them using a password
-- Upload encrypted files and decrypt them with the correct password
-- Download the resulting file directly from the browser
-- Clean and minimal UI built with React and Vite
-- Server-side processing with OpenSSL
+## Install
 
-## 🧰 Tech Stack
+```bash
+npm install
+```
 
-- **Frontend:** React + Vite
-- **Styling:** Tailwind CSS (or your preferred CSS framework)
-- **Backend:** Python, Django
-- **Encryption:** OpenSSL CLI
+> You can make sure you are running Node.js 18 with `nvm`. Run `nvm use` to set the Node.js 18 in this project.
 
-## 📦 Getting Started
+## Develop
 
-### Prerequisites
+```bash
+npm run dev
+```
 
-- Node.js and npm
-- OpenSSL installed on your system
+## Build
 
-### Installation
+```bash
+npm build
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/EzEncrypt.git
-   cd EzEncrypt
-2. ** Install Frontend Dependencies
-   ```bash
-   npm install
-3. ** Start the development server
-   npm run dev
+Preview:
 
-## 🛡 Security Notes
-- Files and passwords are not stored
-- For personal or low-risk usage only
+```bash
+npm run preview
+```
 
-## 🙌 Acknowledgements
-- Inspired by OpenSSL's powerful CLI capabilities
-- UI styled minimally for simplicity
+## Deploy on zCloud
+
+Create your account at [zcloud.ws](https://zcloud.ws).
+
+Connect to your GitHub, create your app and done!
+
+Push to Deploy.
+
+Or use the preconfigured [action](./.github/workflows/deploy.yaml) to deploy your app. Uncomment all the lines and add your zCloud User Token (ZCLOUD_USER_TOKEN) to your secrets on GitHub and replace `env` placeholder value with your app env name (check it on app.zcloud.ws > Your app env > Settings).
